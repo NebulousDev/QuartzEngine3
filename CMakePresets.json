@@ -1,0 +1,50 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "Configure-Linux-GCC15-Ninja",
+            "displayName": "[PRESET/Configure] LINUC GCC 15.2.0 x86_64 Ninja",
+            "description": "[PRESET/Configure] LINUC GCC 15.2.0 x86_64 Ninja",
+            "binaryDir": "${sourceDir}/Build/Binary/${presetName}",
+            "generator": "Ninja",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/Build/Install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+            }
+        },
+        {
+            "name": "Configure-Linux-GCC15-Ninja-DEBUG",
+            "displayName": "[DEBUG/Configure] LINUX GCC 15.2.0 x86_64 Ninja",
+            "description": "[DEBUG/Configure] LINUX GCC 15.2.0 x86_64 Ninja",
+            "inherits": "Configure-Linux-GCC15-Ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "Configure-Linux-GCC15-Ninja-RELEASE",
+            "displayName": "[RELEASE/Configure] LINUX GCC 15.2.0 x86_64 Ninja",
+            "description": "[RELEASE/Configure] LINUX GCC 15.2.0 x86_64 Ninja",
+            "inherits": "Configure-Linux-GCC15-Ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Build-Linux-GCC15-Ninja-DEBUG",
+            "displayName": "[DEBUG/Build] LINUX GCC 15.2.0 x86_64 Ninja",
+            "description": "[DEBUG/Build] LINUX GCC 15.2.0 x86_64 Ninja",
+            "configurePreset": "Configure-Linux-GCC15-Ninja-DEBUG"
+        },
+        {
+            "name": "Build-Linux-GCC15-Ninja-RELEASE",
+            "displayName": "[RELEASE/Build] LINUX GCC 15.2.0 x86_64 Ninja",
+            "description": "[RELEASE/Build] LINUX GCC 15.2.0 x86_64 Ninja",
+            "configurePreset": "Configure-Linux-GCC15-Ninja-DEBUG"
+        }
+    ]
+}
