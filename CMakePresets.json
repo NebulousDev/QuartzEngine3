@@ -20,7 +20,7 @@
             "description": "[DEBUG/Configure] LINUX GCC x86_64 Ninja",
             "inherits": "Configure-Linux-GCC-Ninja",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "DEBUG"
             }
         },
         {
@@ -29,7 +29,7 @@
             "description": "[RELEASE/Configure] LINUX GCC x86_64 Ninja",
             "inherits": "Configure-Linux-GCC-Ninja",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "RELEASE"
             }
         }
     ],

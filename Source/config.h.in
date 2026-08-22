@@ -1,0 +1,3 @@
+#pragma once
+
+#define QUARTZ_CONFIG_PRINT_HEADER      ${QUARTZ_CONFIG_PRINT_HEADER}
